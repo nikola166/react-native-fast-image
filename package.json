@@ -28,14 +28,15 @@
         "ios",
         "!ios/build",
         "dist",
-        "RNFastImage.podspec"
+        "RNFastImage.podspec",
+        "src"
     ],
     "scripts": {
         "build": "dv-scripts build && cp src/index.js.flow dist/index.js.flow && cp src/index.js.flow dist/index.cjs.js.flow",
         "lint": "dv-scripts lint",
         "release": "dv-scripts release",
         "test": "dv-scripts test",
-        "postinstall": "dv-scripts build && cp src/index.js.flow dist/index.js.flow && cp src/index.js.flow dist/index.cjs.js.flow"
+        "postinstall": "dv-scripts build && cp src/index.js.flow dist/index.js.flow && cp src/index.js.flow dist/index.cjs.js.flow && rm src"
     },
     "prettier": {
         "semi": false,
